@@ -1,10 +1,13 @@
 $(document).ready(function () {
     const characters = [
         {
-            name: "Hulk",
-            marvelId: "1009351",
-            comicVineId: "2267"
+            //name: "Hulk",
+            //marvelId: "1009351",
+            //comicVineId: "2267"
         },
+        {
+            name: "Superman",
+        }
     ];
     console.log(md5("want"));
 
@@ -12,7 +15,7 @@ $(document).ready(function () {
     let privateKey = "274ea5c7e32c0faf4d49d5ffc01a19459d78299a";
     let ts = 1;
     let hash = md5(ts + privateKey + publicKey);
-    let character = "Hulk";
+    let character = "Thor";
 
 
     function searchMarvelAPI() {
@@ -37,6 +40,7 @@ $(document).ready(function () {
                 character,
             method: "GET",
         }).then(function (response) {
+            console.log("Marvel API Data:")
             console.log(response);
         })
     };
@@ -48,6 +52,7 @@ $(document).ready(function () {
                 "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/character/4005-2267/?api_key=178d99bd87c1b1682755f72ef5e4c9d8a10c479f&format=json&field_list=deck,powers",
             method: "GET",
         }).then(function (response) {
+            console.log("ComicVine API Data:")
             console.log(response);
         });
     }
