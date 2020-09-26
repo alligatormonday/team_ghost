@@ -79,11 +79,12 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  position: relative;
 }
 h3 {
   position: absolute;
   text-align-last: center;
-  top: 235%;
+  top: 40%;
   width: 100%;
 }
 @media only screen and (max-width : 1024px) {
