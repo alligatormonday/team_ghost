@@ -48,7 +48,7 @@ $(document).ready(function () {
             name: "Callisto",
         },
         {
-            name: "Ant-Man",
+            name: "AntMan",
         },
         {
             name: "Copycat",
@@ -77,16 +77,18 @@ $(document).ready(function () {
         $("#buttonsAreaLeft").append(leftCharacterButton);
     }    
     
-    //Listens and detects if the user clicks the 'left-character-buttons'
+    //Listens and detects if the user clicks the 'left-character-buttons' AND goes out to the API to grab the data
     $(".leftButton").on("click", function () {
         let leftCharacter = ($(this).text());
         console.log("Left Selected: " + leftCharacter);
+        marvelAPI(leftCharacter);
     });
 
-    //Listens and detects if the user clicks the 'right-character-buttons'
+    //Listens and detects if the user clicks the 'right-character-buttons' AND goes out to the API to grab the data
     $(".rightButton").on("click", function () {
         let  rightCharacter = ($(this).text());
         console.log("Right Selected: " + rightCharacter);
+        marvelAPI(rightCharacter);
     });
     
 
@@ -100,7 +102,7 @@ $(document).ready(function () {
     let privateKey = "274ea5c7e32c0faf4d49d5ffc01a19459d78299a";
     let ts = 1;
     let hash = md5(ts + privateKey + publicKey);
-    let character = "Thor";
+    
 
 
     function searchMarvelAPI() {
@@ -116,7 +118,7 @@ $(document).ready(function () {
         })
     }; 
     
-    function marvelAPI() {
+    function marvelAPI(character) {
         $.ajax({
             url:
                 "https://gateway.marvel.com/v1/public/characters?apikey=b96debf8a06e6f68f22924e2c930b450&ts=1&hash=" +
@@ -129,7 +131,7 @@ $(document).ready(function () {
             console.log(response);
         })
     };
-    marvelAPI();
+
     
     function comicVineAPI() {
         $.ajax({
