@@ -5,7 +5,60 @@
  *
  * Made By MaterializeCSS.com
  */
+h1 { 
+  font-family: "Holtwood One SC"; font-size: 96px; font-style: normal; 
+  font-variant: normal; font-weight: 700; line-height: 26.4px; color: #b71c1c;
+} 
+h3 { 
+  font-family: "Holtwood One SC"; font-size: 72px; font-style: normal; 
+  font-variant: normal; font-weight: 700; line-height: 15.4px; color: #b71c1c;
+} 
+h2 { 
+  font-family: "Holtwood One SC"; font-size: 28pxx; font-style: normal; 
+  font-variant: normal; font-weight: 700; line-height: 15.4px; color: #000000
+} 
+p { 
+  font-family: "Holtwood One SC"; font-size: 18px; font-style: normal; 
+  font-variant: normal; font-weight: 400; line-height: 20px; 
+} 
+blockquote { 
+  font-family: "Holtwood One SC"; font-size: 21px; font-style: normal; 
+  font-variant: normal; font-weight: 400; line-height: 30px; 
+} 
+pre { 
+  font-family: "Holtwood One SC"; font-size: 13px; font-style: normal; 
+  font-variant: normal; font-weight: 400; line-height: 18.5714px; 
+}
+ 
+.parallax{
+  background-image: url("https://cdn.wallpapersafari.com/24/71/0DCEI5.jpg");
+  height: 800px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
 
+#header{
+position: absolute;
+z-index: 1000;
+top: 300px;
+width:100%;
+}
+.text-box{
+height: 600px;
+padding: 50px;
+}
+@media only screen and (max-device-width: 1024px) {
+  .parallax {
+      background-attachment: scroll;
+  }
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+}
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -18,30 +71,24 @@ p {
 .sidenav-trigger {
   color: #26a69a;
 }
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+#parallax-container{
+  background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Ferikkain%2Ffiles%2F2016%2F05%2FCaptain-America-Civil-War-concept-art-1-1200x641.jpg");
+  height: 800px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
 }
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+h3 {
+  position: absolute;
+  text-align-last: center;
+  top: 235%;
+  width: 100%;
 }
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
+@media only screen and (max-width : 1024px) {
+  #parallax-container {
+      background-attachment: scroll;
   }
 }
 
@@ -53,5 +100,6 @@ p {
 }
 
 footer.page-footer {
+  background-color: #000000;
   margin: 0;
 }
