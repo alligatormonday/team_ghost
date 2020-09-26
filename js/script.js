@@ -6,7 +6,7 @@ $(document).ready(function () {
             // comicVineId: "2267"
         },
         {
-            name: "Spiderman",
+            name: "Spider-Man",
         },
         {
             name: "Iron Man",
@@ -82,6 +82,7 @@ $(document).ready(function () {
         let leftCharacter = ($(this).text());
         console.log("Left Selected: " + leftCharacter);
         marvelAPI(leftCharacter);
+        comicVineAPI(leftCharacter);
     });
 
     //Listens and detects if the user clicks the 'right-character-buttons' AND goes out to the API to grab the data
@@ -89,6 +90,7 @@ $(document).ready(function () {
         let  rightCharacter = ($(this).text());
         console.log("Right Selected: " + rightCharacter);
         marvelAPI(rightCharacter);
+        comicVineAPI(rightCharacter);
     });
     
 
@@ -133,15 +135,15 @@ $(document).ready(function () {
     };
 
     
-    function comicVineAPI() {
+    function comicVineAPI(character) {
         $.ajax({
             url:
-                "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/character/4005-2267/?api_key=178d99bd87c1b1682755f72ef5e4c9d8a10c479f&format=json&field_list=deck,powers",
+                "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/search/?api_key=178d99bd87c1b1682755f72ef5e4c9d8a10c479f&format=json&resources=issue&query=" + character,
             method: "GET",
         }).then(function (response) {
             console.log("ComicVine API Data:")
             console.log(response);
         });
     }
-    comicVineAPI();
-});
+    });
+
