@@ -1,13 +1,67 @@
 $(document).ready(function () {
     const characters = [
         {
-            //name: "Hulk",
-            //marvelId: "1009351",
-            //comicVineId: "2267"
+            name: "Hulk",
+            // marvelId: "1009351",
+            // comicVineId: "2267"
         },
         {
-            name: "Superman",
-        }
+            name: "Spiderman",
+        },
+        {
+            name: "Iron Man",
+        },
+        {
+            name: "Thor",
+        },
+        {
+            name: "Thanos",
+        },
+        {
+            name: "Storm",
+        },
+        {
+            name: "Venom",
+        },
+        {
+            name: "Black Panther",
+        },
+        {
+            name: "Hawkeye",
+        },
+        {
+            name: "Captain Marvel",
+        },
+        {
+            name: "Captain America",
+        },
+        {
+            name: "Green Goblin",
+        },
+        {
+            name: "Batwing",
+        },
+        {
+            name: "Wolverine",
+        },
+        {
+            name: "Callisto",
+        },
+        {
+            name: "Ant-Man",
+        },
+        {
+            name: "Copycat",
+        },
+        {
+            name: "Vision",
+        },
+        {
+            name: "Void",
+        },
+        {
+            name: "Blade",
+        },
     ];
     console.log(md5("want"));
 
