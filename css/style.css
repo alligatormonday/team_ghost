@@ -103,3 +103,41 @@ footer.page-footer {
   background-color: #000000;
   margin: 0;
 }
+/* start character battle grid */
+.gridboi {
+  display: grid;
+  grid-template-columns: [col1-start] 1fr [col1-end] [col2-start] 3fr [col2-end] [col3-start]1fr[col3-end];
+  grid-template-rows: [row1-start] 1fr [row1-end] [row2-start]3fr [row2-end] [row3-start]1fr[row3-end];
+  grid-template-areas:
+    "character character character"
+    "attributes image image"
+    "attributes bio bio";
+}
+
+.red {
+  background-color: red;
+}
+
+.character {
+  grid-area: character;
+  background-color: red;
+}
+.attributes {
+  grid-area: attributes;
+  background-color: blue;
+}
+.image {
+  grid-area: image;
+  background-color: green;
+}
+.bio {
+  grid-area: bio;
+  background-color: wheat;
+}
+
+.boxyBoi{
+    height: 64rem;
+    width: 64rem;
+}
+
+/* end character battle grid */
