@@ -130,19 +130,19 @@ footer.page-footer {
 
 .character {
   grid-area: character;
-  background-color: red;
+  /* background-color: red; */
 }
 .attributes {
   grid-area: attributes;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .image {
   grid-area: image;
-  background-color: green;
+  /* background-color: green; */
 }
 .bio {
   grid-area: bio;
-  background-color: wheat;
+  /* background-color: wheat; */
 }
 
 /* Head-to-head grid */
