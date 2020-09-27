@@ -103,15 +103,19 @@ footer.page-footer {
   background-color: #000000;
   margin: 0;
 }
-/* start character battle grid */
+/* Head-to-head comparison grid */
 .gridboi {
   display: grid;
-  grid-template-columns: [col1-start] 1fr [col1-end] [col2-start] 3fr [col2-end] [col3-start]1fr[col3-end];
-  grid-template-rows: [row1-start] 1fr [row1-end] [row2-start]3fr [row2-end] [row3-start]1fr[row3-end];
+  grid-template-columns:  1fr auto;
+  grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "character character character"
-    "attributes image image"
-    "attributes bio bio";
+    "character character"
+    "combat image"
+    "durability image"
+    "intelligence image"
+    "power image"
+    "speed image"
+    "strength bio"
 }
 
 .red {
@@ -135,9 +139,4 @@ footer.page-footer {
   background-color: wheat;
 }
 
-.boxyBoi{
-    height: 64rem;
-    width: 64rem;
-}
-
-/* end character battle grid */
+/* Head-to-head grid */
