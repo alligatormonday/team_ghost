@@ -118,6 +118,12 @@ footer.page-footer {
     "strength bio"
 }
 
+.bang {
+  font-family: 'Bangers', cursive;
+  font-size: 24rem;
+  font-weight: bolder;
+}
+
 .red {
   background-color: red;
 }
