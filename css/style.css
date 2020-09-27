@@ -103,3 +103,40 @@ footer.page-footer {
   background-color: #000000;
   margin: 0;
 }
+/* Head-to-head comparison grid */
+.gridboi {
+  display: grid;
+  grid-template-columns:  1fr auto;
+  grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "character character"
+    "combat image"
+    "durability image"
+    "intelligence image"
+    "power image"
+    "speed image"
+    "strength bio"
+}
+
+.red {
+  background-color: red;
+}
+
+.character {
+  grid-area: character;
+  background-color: red;
+}
+.attributes {
+  grid-area: attributes;
+  background-color: blue;
+}
+.image {
+  grid-area: image;
+  background-color: green;
+}
+.bio {
+  grid-area: bio;
+  background-color: wheat;
+}
+
+/* Head-to-head grid */
