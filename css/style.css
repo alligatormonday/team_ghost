@@ -120,8 +120,9 @@ footer.page-footer {
 
 .bang {
   font-family: 'Bangers', cursive;
-  font-size: 24rem;
+  font-size: 3rem;
   font-weight: bolder;
+  text-align: center;
 }
 
 .red {
