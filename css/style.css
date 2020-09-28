@@ -104,7 +104,7 @@ footer.page-footer {
   margin: 0;
 }
 /* Head-to-head comparison grid */
-.gridboi {
+.character-grid {
   display: grid;
   grid-template-columns:  1fr auto;
   grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -118,6 +118,7 @@ footer.page-footer {
     "strength bio"
 }
 
+/* Class for Character name font */
 .bang {
   font-family: 'Bangers', cursive;
   font-size: 3rem;
@@ -125,10 +126,7 @@ footer.page-footer {
   text-align: center;
 }
 
-.red {
-  background-color: red;
-}
-
+/* Made a color-code to visualize the css grid */
 .character {
   grid-area: character;
   /* background-color: red; */
