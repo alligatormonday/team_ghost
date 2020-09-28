@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Array to store the name of each character
   const characters = [
     {
       name: "Hulk",
@@ -62,18 +63,13 @@ $(document).ready(function () {
     },
   ];
 
-  // <select id="charOneOptions">
-  //         <option value="buttOne" disabled selected>Choose Your Character</option>
-  //       </select>
-  //       <label>CHARACTER</label>
-
   // Create the 'select' element dynamically
   let emptySelect = document.createElement("select");
   let emptySelect2 = document.createElement("select");
   emptySelect.setAttribute("id", "charOneOptions");
   emptySelect2.setAttribute("id", "charTwoOptions");
 
-  // Go over characters in array and make each one an option with a value (map rather than fromEach to the array non-destructively)
+  // Go over characters in array and make each one an option with a value ('map' rather than 'forEach' to the array without re-configuring it. Better option than 'forEach' )
   characters.map((item) => {
     let optionItem;
     // Handles 'spaces' in character names
@@ -111,8 +107,9 @@ $(document).ready(function () {
   let ts = 1;
   let hash = md5(ts + privateKey + publicKey);
 
+  // Function to pull character data from Marvel API and append to page
   function marvelAPI(character, boxToChange) {
-    console.log(character);
+    // console.log(character);
 
     $.ajax({
       url:
@@ -149,6 +146,7 @@ $(document).ready(function () {
     });
   }
 
+  // Function to pull character data from SuperHeroAPI and append to page
   function superHeroAPI(character, boxToChange) {
     $.ajax({
       url:
@@ -157,12 +155,14 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       if (boxToChange === "one") {
+        // Created variables for character attributes to house 'template literals'
         let intP = `<p>Intelligence \n ${response.results[0].powerstats.intelligence}</p>`;
         let comP = `<p>Combat \n ${response.results[0].powerstats.combat}</p>`;
         let spdP = `<p>Speed \n ${response.results[0].powerstats.speed}</p>`;
         let strP = `<p>Strength \n ${response.results[0].powerstats.strength}</p>`;
         let powP = `<p>Power \n ${response.results[0].powerstats.power}</p>`;
         let duraP = `<p>Durability \n ${response.results[0].powerstats.durability}</p>`;
+        // Add created variables to the HTML
         $("#charOneIntelligence").html(intP);
         $("#charOnePower").html(powP);
         $("#charOneSpeed").html(spdP);
@@ -186,62 +186,4 @@ $(document).ready(function () {
     });
   }
 
-  function comicVineAPI(character) {
-    $.ajax({
-      url:
-        "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/search/?api_key=178d99bd87c1b1682755f72ef5e4c9d8a10c479f&format=json&resources=issue&query=" +
-        character,
-      method: "GET",
-    }).then(function (response) {
-      console.log("ComicVine API Data:");
-      console.log(response);
-    });
-  }
 });
-
-// Code to generate the buttons
-//***Left & Right Generated Buttons */
-//***Need to work on the Class to properly display the buttons */
-//   const test = `<div class="input-field col s12">
-//   <select multiple>
-//     <option value="" disabled selected>Choose your option</option>
-//     <option value="1">Option 1</option>
-//     <option value="2">Option 2</option>
-//     <option value="3">Option 3</option>
-//   </select>
-//   <label>Materialize Multiple Select</label>
-// </div>`;
-//   for (let i = 0; i < characters.length; i++) {
-//     //Left list of buttons
-//     let leftCharacterButton = $(
-//       '<button class="leftButton btnSecond btn-primary" type="button">' +
-//         characters[i].name +
-//         "</button>"
-//     );
-//     //Right list of buttons
-//     let rightCharacterButton = $(
-//       '<button class=" rightButton btnSecond btn-primary" type="button">' +
-//         characters[i].name +
-//         "</button>"
-//     );
-//     //Append Left&Right list of buttons
-//     $("#buttonsAreaRight").append(rightCharacterButton);
-
-//   }
-//   $("#buttonsAreaLeft").append(test);
-
-//Listens and detects if the user clicks the 'left-character-buttons' AND goes out to the API to grab the data
-// $(".leftButton").on("click", function () {
-//   let leftCharacter = $(this).text();
-//   console.log("Left Selected: " + leftCharacter);
-//   marvelAPI(leftCharacter);
-//   comicVineAPI(leftCharacter);
-// });
-
-// //Listens and detects if the user clicks the 'right-character-buttons' AND goes out to the API to grab the data
-// $(".rightButton").on("click", function () {
-//   let rightCharacter = $(this).text();
-//   console.log("Right Selected: " + rightCharacter);
-//   marvelAPI(rightCharacter);
-//   comicVineAPI(rightCharacter);
-// });
