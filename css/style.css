@@ -83,7 +83,7 @@ p {
 h3 {
   position: absolute;
   text-align-last: center;
-  top: 235%;
+  top: 130%;
   width: 100%;
 }
 @media only screen and (max-width : 1024px) {
