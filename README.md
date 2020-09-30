@@ -32,4 +32,4 @@ THEN I WANT an option to subscribe to the comics the Marvel Universe
 [SuperHero API](https://superheroapi.com/)
 
 ## Credits: 
-* [Brandon Burrus](https://github.com/BrandonBurrus) - assisted with response from SuperHero API
+* [Dane Burns](https://github.com/daneburns) - assisted with response from SuperHero API
